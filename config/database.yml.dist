@@ -1,0 +1,25 @@
+defaults: &defaults
+  adapter: mysql
+  encoding: utf8
+  pool: 5
+
+development:
+  host: localhost
+  database: english_learning_development
+  user: root
+  password:
+  <<: *defaults
+
+test:
+  host: localhost
+  database: english_learning_test
+  user: root
+  password:
+  <<: *defaults
+
+production:
+  host: localhost
+  database: english_learning_production
+  user: root
+  password:
+  <<: *defaults
