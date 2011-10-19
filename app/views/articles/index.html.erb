@@ -1,8 +1,8 @@
-<h1>文章列表</h1>
+<h1><%= t '.title' %></h1>
 <%= render 'new_article_link' %>
 <%- if @articles.empty? %>
-  <p>还没有任何文章</p>
-  <p>点击<%= render 'new_article_link' %>创建一篇文章！</p>
+  <p><%= t '.no_article' %></p>
+  <p><%= t 'globals.button_or_link.click' %><%= render 'new_article_link' %><%= t '.create_an_article' %></p>
 <%- else %>
   <ul>
     <%= render :partial => 'article_item', :collection => @articles, :as => :article %>

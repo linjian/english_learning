@@ -1,0 +1,5 @@
+cn:
+  globals:
+    button_or_link:
+      click: "点击"
+      create: "创建"

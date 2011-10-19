@@ -2,14 +2,14 @@
 
 <%= form_for :article, :url => articles_path do |f| %>
   <div>
-    <%= f.label :title, '标题：' %>
+    <%= f.label :title, t('articles.form.label.title') %>
     <%= f.text_field :title %>
   </div>
 
   <div>
-    <%= f.label :content, '正文：' %>
+    <%= f.label :content, t('articles.form.label.content') %>
     <%= f.text_area :content %>
   </div>
 
-  <%= f.submit '创建' %>
+  <%= f.submit t('globals.button_or_link.create') %>
 <%- end %>
