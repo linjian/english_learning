@@ -1,0 +1,10 @@
+<h1>文章列表</h1>
+<%= render 'new_article_link' %>
+<%- if @articles.empty? %>
+  <p>还没有任何文章</p>
+  <p>点击<%= render 'new_article_link' %>创建一篇文章！</p>
+<%- else %>
+  <ul>
+    <%= render :partial => 'article_item', :collection => @articles, :as => :article %>
+  </ul>
+<%- end %>

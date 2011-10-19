@@ -1,0 +1,15 @@
+<%= render 'return_to_index_link' %>
+
+<%= form_for :article, :url => articles_path do |f| %>
+  <div>
+    <%= f.label :title, '标题：' %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :content, '正文：' %>
+    <%= f.text_area :content %>
+  </div>
+
+  <%= f.submit '创建' %>
+<%- end %>
