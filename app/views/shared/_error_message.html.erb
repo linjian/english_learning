@@ -1,0 +1,7 @@
+<%- if object %>
+  <%- object.errors[method].each do |error| %>
+    <span class="error_message">
+      <%= error %>
+    </span>
+  <%- end %>
+<%- end %>

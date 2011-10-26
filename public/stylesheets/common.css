@@ -1,0 +1,12 @@
+.field_with_errors {
+  border: solid 1px red;
+}
+
+.error_message {
+  display: block;
+  color: red;
+}
+
+.required_field {
+  color: red;
+}

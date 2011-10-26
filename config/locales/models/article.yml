@@ -1,0 +1,10 @@
+cn:
+  activerecord:
+    errors:
+      models:
+        article:
+          attributes:
+            title:
+              blank: "标题不能为空"
+            content:
+              blank: "正文不能为空"

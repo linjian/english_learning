@@ -1,14 +1,28 @@
 <%= render 'return_to_index_link' %>
 
-<%= form_for :article, :url => articles_path do |f| %>
+<%= form_for :article, :url => articles_path, :html => {:id => "new_article"} do |f| %>
   <div>
-    <%= f.label :title, t('articles.form.label.title') %>
-    <%= f.text_field :title %>
+    <div class="label">
+      <%= render "shared/required_field_flag" %>
+      <%= f.label :title, t('articles.form.label.title') %>
+    </div>
+    <div class="field">
+      <%= f.text_field :title, :class => "fill_field #{error_class(@article, :title)}" %>
+      <%= render "shared/error_message", :object => @article, :method => :title %>
+    </div>
+    <%= render "shared/clear" %>
   </div>
 
   <div>
-    <%= f.label :content, t('articles.form.label.content') %>
-    <%= f.text_area :content %>
+    <div class="label">
+      <%= render "shared/required_field_flag" %>
+      <%= f.label :content, t('articles.form.label.content') %>
+    </div>
+    <div class="field">
+      <%= f.text_area :content, :class => "fill_field #{error_class(@article, :content)}" %>
+      <%= render "shared/error_message", :object => @article, :method => :content %>
+    </div>
+    <%= render "shared/clear" %>
   </div>
 
   <%= f.submit t('globals.button_or_link.create') %>

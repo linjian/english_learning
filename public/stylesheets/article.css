@@ -1,0 +1,8 @@
+#new_article .fill_field {
+  width: 400px;
+}
+
+#new_article .label,
+#new_article .field {
+  float: left;
+}
