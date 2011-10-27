@@ -19,6 +19,6 @@ class Word < ActiveRecord::Base
   before_validation :set_user_id
 
   def set_user_id
-    self.user_id ||= self.article.user_id
+    self.user_id = self.article.user_id
   end
 end
