@@ -10,29 +10,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111027025923) do
+ActiveRecord::Schema.define(:version => 20111027150035) do
 
   create_table "articles", :force => true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.integer  "user_id"
+    t.string   "title",      :null => false
+    t.text     "content",    :null => false
+    t.integer  "user_id",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login"
-    t.string   "password"
+    t.string   "login",      :null => false
+    t.string   "password",   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "words", :force => true do |t|
-    t.integer  "article_id"
-    t.integer  "user_id"
-    t.integer  "starting_index"
-    t.integer  "char_count"
-    t.string   "origin_name"
+    t.integer  "article_id",     :null => false
+    t.integer  "user_id",        :null => false
+    t.integer  "starting_index", :null => false
+    t.integer  "char_count",     :null => false
+    t.string   "origin_name",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
