@@ -1,8 +1,9 @@
 class Article < ActiveRecord::Base
   belongs_to :user
 
-  has_many :words
+  has_many :words, :dependent => :nullify
 
+  validates_presence_of :user_id
   validates :title,
     :presence   => true,
     :length     => {:maximum => 255},
